@@ -1,0 +1,291 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+}
+*span {
+    font-size: 14px;
+}
+
+.container {
+    height: 100vh;
+    align-items: inherit;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* контейнер шириной 1100px */
+.PageContent {
+    max-width: 1100px;
+    width: 1100px;
+    height: auto;
+    position: relative; 
+    overflow: hidden;
+    /* top: 80px;
+    left: 170px; */
+}
+/*  */
+
+/* контейнер с картинкой и описанием фильма */
+.MovieDescriptionCont {
+    display: flex;
+    flex-direction: row;
+}
+.FilmDescriptionAndRating-container {
+    display: flex;
+    flex-direction: row;
+}
+/*  */
+
+/* картинка */
+.MoviePreview {
+    width: 340px;
+    height: 486px;
+    border-radius: 10px;
+    background-image: url("/img/FilmPrev.jpeg");
+    background-size: cover;
+}
+/*  */
+
+/* Название, год производства, инфа о видео и аудиодорожке + кнопка "смотреть" */
+.NameDesctiptionVidInfoEtc {
+    width: 530px;
+    margin-left: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/*  */
+.FilmName {
+    width: 530px;
+    height: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36px;
+}
+.AgeRating {
+    width: 530px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.BriefFilmDescription {
+    margin-top: 10px;
+    width: 530px;
+    height: auto;
+    font-size: 16px;
+}
+.WatchFilmButton {
+    width: 205px;
+    height: 41px;
+    background: none;
+    border: 0;
+    color: #fff;
+    background-color: #FF5C00;
+    border-radius: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.WatchFilmButton:hover{
+    background-color: #FF3D00;
+    cursor: pointer;
+}
+/*  */
+/* Описание параметров показа в плеере */
+/*  Первый блок */
+.AudioAndVideoPlayerDescription {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.AudioAndVideoPlayerDescription >:last-child{
+    margin-left: 30px;
+}
+.AVP-titles > *{
+    opacity: 0.4;
+    display: block;
+    font-size: 14px;
+}
+.AVP-titles > *:not(:first-child) {
+    margin-top: 15px;
+}
+.AVP-titles-elem {
+    width: 130px;
+}
+/*  */
+
+/*  Второй блок */
+.AVP-titles-description {
+    width: 330px;
+    height: 82px;
+}
+.AVP-titles-description >* {
+    font-size: 14px;
+    display: block;
+}
+.AVP-titles-description>:not(:first-child) {
+    margin-top: 15px;
+}
+.AVP-titles-description-elem {
+    width: 330px;
+}
+/* HD качество */
+.AVP-titles-description-elem-border {
+    width: 49px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 3px 5px;
+}
+/*  */
+/*  */
+
+/* О фильме */
+.FilmDesription-title {
+    margin-top: 38px;
+    font-size: 22px;
+    font-weight: 900;
+}
+/*  */
+
+/* Год производства, страна, жанр, слоган, режиссер, время */
+.FilmDescription-container {
+    width: 403px;
+    height: 171px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+/* Первый контейнер */
+.YCGSDT-container {
+    width: 130px;
+    height: 171px;
+}
+.YCGSDT-container >*{
+    opacity: 0.4;
+    display: block;
+    font-size: 14px;
+}
+.YCGSDT-container >*:not(:first-child) {
+    margin-top: 15px;
+}
+/*  */
+
+/* Второй контейнер */
+.YCGSDT-description-container {
+    width: 243px;
+    height: 171px;
+    margin-left: 30px;
+}
+
+.YCGSDT-description-container>* {
+    display: block;
+    font-size: 14px;
+}
+
+.YCGSDT-description-container>*:not(:first-child) {
+    margin-top: 15px;
+}
+/*  */
+.pale {
+    opacity: 0.4;
+}
+/*  */
+
+/* Оценка фильма */
+.FilmRating-container {
+    width: 150px;
+    height: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.KinopoiskRate {
+    font-size: 36px;
+    font-weight: 900;
+    color: #44C916;
+}
+.RatingCounter {
+    opacity: 0.4;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.ReviewCounter {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.ReviewCounter:hover {
+    color: #FF5C00;
+    cursor: pointer;
+}
+/*  */
+
+/* Адаптация страницы */
+@media (max-width: 1200px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: inherit;
+        overflow-x: hidden;
+    }
+    .PageContent {
+        max-width: 1000px;
+    }
+    .NameDesctiptionVidInfoEtc {
+        max-width: 500px;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: inherit;
+        overflow-x: hidden;
+    }
+
+    .PageContent {
+        max-width: 1000px;
+    }
+    .FilmDescriptionAndRating-container {
+        position: relative;
+        margin-right: -60px;
+        right: 0px;
+    }
+    .NameDesctiptionVidInfoEtc {
+        max-width: 500px;
+    }
+
+}
+@media (max-width: 1080px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+        height: 1200px;
+        display: flex;
+        justify-content: center;
+    }
+    .PageContent {
+        max-width: 800px;
+        width: 800px;
+    } 
+    .FilmRating-container {
+        margin-left: 10px;
+        position: relative;
+        right: -100px;
+        top: calc(486px + 80px)
+    }
+    .MoviePreview {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .NameDesctiptionVidInfoEtc {
+        position: relative;
+        top: calc(486px + 80px);
+    }
+}
+/*  */
